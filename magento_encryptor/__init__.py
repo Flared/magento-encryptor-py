@@ -1,6 +1,6 @@
+import hashlib
 import nacl.pwhash.argon2id
 from itertools import cycle, islice
-import hashlib
 from functools import reduce
 
 HASH_VERSION_MD5 = 0
