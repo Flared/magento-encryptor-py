@@ -1,4 +1,4 @@
-import encryptor
+import magento_encryptor
 import pytest
 
 
@@ -22,10 +22,26 @@ import pytest
             "3b68ca4706cbae291455e4340478076c1e1618e742b6144cfcc3e50f648903e4:salt:0:1",
             True,
         ],
+        [
+            "password",
+            "c6aad9e058f6c4b06187c06d2b69bf506a786af030f81fb6d83778422a68205e:salt:1:3_32_2_67108864",
+            True,
+        ],
     ],
 )
 def test_verify(password, hash_, expected):
     assert (
-        encryptor.verify(password, hash_, keys=["g9mY9KLrcuAVJfsmVUSRkKFLDdUPVkaZ"])
+        magento_encryptor.verify(password, hash_)
         == expected
     )
+
+@pytest.mark.parametrize(
+    "hash_",
+    [
+        "c6aad9e058f6c4b06187c06d2b69bf506a786af030f81fb6d83778422a68205e:salt:4",
+    ]
+)
+def test_invalid(hash_):
+    with pytest.raises(ValueError):
+        magento_encryptor.verify("password", hash_)
+

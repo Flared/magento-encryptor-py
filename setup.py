@@ -5,7 +5,7 @@ setuptools.setup(
     author="Israël Hallé",
     author_email="israel.halle@flare.systems",
     url="https://github.com/flared/magento-encryptor-py",
-    version="0.1",
+    version="0.2",
     packages=["magento_encryptor",],
     license="License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)",
     long_description=open("README.md").read(),
