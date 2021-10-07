@@ -23,8 +23,8 @@ import pytest
             True,
         ],
         [
-            "password",
-            "c6aad9e058f6c4b06187c06d2b69bf506a786af030f81fb6d83778422a68205e:salt:1:3_32_2_67108864",
+            "Password123",
+            "a5dab5e8d38327ff79ca3d812fd00aad7d88bca36213d86e16de1d8263064c9e:lx9bJ7pfVZ6KctmX0jEuEXcGBFOYusWc:3_32_2_67108864",
             True,
         ],
     ],
